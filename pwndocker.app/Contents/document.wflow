@@ -62,12 +62,14 @@
 					<string>#!/bin/bash
 if /usr/local/bin/docker info | grep -q 'daemon'; then
    open /Applications/Docker.app
+	osascript -e 'display notification "Docker daemon not found.\nDocker is starting now." with title "pwndocker"'
 fi
 while /usr/local/bin/docker info | grep -q 'daemon';
 do
 	sleep 3
 done
-cd ~/Desktop &amp;&amp; /usr/local/bin/docker run -d --rm -h pwndocker --name pwndocker -v $(pwd)/pwndocker:/ctf/work -p 23946:23946 --cap-add=SYS_PTRACE skysider/pwndocker</string>
+cd ~/Desktop &amp;&amp; /usr/local/bin/docker run -d --rm -h pwndocker --name pwndocker -v $(pwd)/pwndocker:/ctf/work -p 23946:23946 --cap-add=SYS_PTRACE skysider/pwndocker
+osascript -e 'display notification "Running pwndocker now..." with title "pwndocker"'</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -76,29 +78,6 @@ cd ~/Desktop &amp;&amp; /usr/local/bin/docker run -d --rm -h pwndocker --name pw
 					<string>/bin/bash</string>
 					<key>source</key>
 					<string></string>
-				</dict>
-				<key>ActionRuntimeParameters</key>
-				<dict>
-					<key>COMMAND_STRING</key>
-					<string>#!/bin/bash
-if /usr/local/bin/docker info | grep -q 'daemon'; then
-   open /Applications/Docker.app
-fi
-while /usr/local/bin/docker info | grep -q 'daemon';
-do
-	sleep 3
-done
-cd ~/Desktop &amp;&amp; /usr/local/bin/docker run -d --rm -h pwndocker --name pwndocker -v $(pwd)/pwndocker:/ctf/work -p 23946:23946 --cap-add=SYS_PTRACE skysider/pwndocker</string>
-					<key>CheckedForUserDefaultShell</key>
-					<true/>
-					<key>inputMethod</key>
-					<integer>0</integer>
-					<key>shell</key>
-					<string>/bin/bash</string>
-					<key>source</key>
-					<string></string>
-					<key>temporary items path</key>
-					<string>/var/folders/lq/9sqhm_4d7mg1lljgfbnp357r0000gn/T/A1C961FF-9F1A-44C2-A7AF-08FD4D50C3AD/1/com.apple.RunShellScript</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.RunShellScript</string>
@@ -251,14 +230,7 @@ cd ~/Desktop &amp;&amp; /usr/local/bin/docker run -d --rm -h pwndocker --name pw
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>tell application "Terminal"	set currentTab to do script ("clear;docker exec -it pwndocker /bin/bash;docker stop pwndocker;echo 'pwndocker stop!!!' ;exit 0")end telltell application "System Events"	tell application process "Terminal"		set frontmost to true	end tellend tell</string>
-				</dict>
-				<key>ActionRuntimeParameters</key>
-				<dict>
-					<key>source</key>
-					<string>tell application "Terminal"	set currentTab to do script ("clear;docker exec -it pwndocker /bin/bash;docker stop pwndocker;echo 'pwndocker stop!!!' ;exit 0")end telltell application "System Events"	tell application process "Terminal"		set frontmost to true	end tellend tell</string>
-					<key>temporary items path</key>
-					<string>/var/folders/lq/9sqhm_4d7mg1lljgfbnp357r0000gn/T/A1C961FF-9F1A-44C2-A7AF-08FD4D50C3AD/1/com.apple.Automator.RunScript</string>
+					<string>display notification "exec pwndocker now..." with title "pwndocker"tell application "Terminal"	set currentTab to do script ("clear;docker exec -it pwndocker /bin/bash;docker stop pwndocker;echo 'pwndocker stop!!!' ;exit 0")end telltell application "System Events"	tell application process "Terminal"		set frontmost to true	end tellend tell</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -322,7 +294,7 @@ end run</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>4266BC55-7A61-42F2-B01F-8AEAFAF6F2C0</key>
+		<key>5DCFE1A9-8208-4F6E-AD7F-67AFD7823A64</key>
 		<dict>
 			<key>from</key>
 			<string>99507B60-1412-4D05-B5B5-610E25E54C63 - 99507B60-1412-4D05-B5B5-610E25E54C63</string>
