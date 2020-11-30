@@ -2,6 +2,17 @@
 
 [Awesome docker for pwn by skysider!!!](https://github.com/skysider/pwndocker)
 
+
+## Sample Screenshot
+
+![In Spotlight](sample/spotlight.png)
+
+- App in Spotlight
+
+![Exec now!](sample/exec_now.png)
+
+- Auto run your pwndocker!
+
 ## Requirement
 
 - Already set up your pwndocker
@@ -26,7 +37,9 @@ If you are lazy like me ...
 
 You can just download this and copy pwndocker.app to **/Application**.
 
-And then open pwndocker gracefully!
+Next time, just open your pwndocker app
+
+And then you can open pwndocker gracefully and auto stop pwndocker when you exit!
 
 (Make sure all your path and container name is set up correctly)
 
