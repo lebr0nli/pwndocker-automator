@@ -24,7 +24,9 @@ Nothing special and very simple Script, but...
 
 If you are lazy like me ...
 
-You can just download this and copy pwndocker.app to **/Application** very gracefully!
+You can just download this and copy pwndocker.app to **/Application**.
+
+And then open pwndocker gracefully!
 
 (Make sure all your path and container name is set up correctly)
 
